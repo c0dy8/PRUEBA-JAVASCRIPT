@@ -34,3 +34,21 @@ body {
     border-radius: 10px;
 }
 
+body {
+    background-color: #f5f6fa;
+}
+
+.dashboard-card {
+    border: none;
+    border-radius: 12px;
+}
+
+.profile-img {
+    border-radius: 50%;
+}
+
+.stat-box {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 10px;
+}
