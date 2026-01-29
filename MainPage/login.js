@@ -16,7 +16,6 @@ form.addEventListener("submit", async (e) => {
         const response = await fetch("http://localhost:3000/users");
         const users = await response.json();
 
-        // Buscar coincidencia
         const userFound = users.find(
             user => user.email === email && user.role === role
         );
