@@ -7,14 +7,12 @@ form.addEventListener("submit", async (e) => {
     const email = document.getElementById("email").value.trim();
     const role = document.getElementById("role").value;
 
-    // Validación básica
     if (!name || !email) {
         alert(" Completa todos los campos");
         return;
     }
 
     try {
-        // Traer usuarios del servidor
         const response = await fetch("http://localhost:3000/users");
         const users = await response.json();
 
@@ -28,10 +26,8 @@ form.addEventListener("submit", async (e) => {
             return;
         }
 
-        // Guardar sesión
         sessionStorage.setItem("user", JSON.stringify(userFound));
 
-        // Redirección por rol
         if (userFound.role === "Admin") {
             window.location.replace("dashboard.html");
         } else {

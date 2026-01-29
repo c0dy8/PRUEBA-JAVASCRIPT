@@ -3,7 +3,6 @@ body {
     font-family: Arial, sans-serif;
 }
 
-/* CARD */
 .food-card {
     border: none;
     border-radius: 12px;
@@ -29,7 +28,6 @@ body {
     margin-top: auto;
 }
 
-/* PRICE & BUTTON */
 .price {
     font-weight: bold;
     color: #22c55e;
@@ -46,7 +44,6 @@ body {
     color: #fff;
 }
 
-/* ORDER BOX */
 .order-box {
     background: #fff;
     padding: 1.5rem;

@@ -8,14 +8,12 @@ form.addEventListener("submit", async (e) => {
     const password = form.querySelector('input[placeholder="Password"]').value.trim();
     const role = form.querySelector("select").value;
 
-    // Validación de campos vacíos
     if (!name || !email || !password) {
         alert("Todos los campos son obligatorios");
         return;
     }
 
     try {
-        // Obtener usuarios existentes
         const res = await fetch("http://localhost:3000/users");
         const users = await res.json();
 
@@ -27,7 +25,6 @@ form.addEventListener("submit", async (e) => {
             return;
         }
 
-        // Crear usuario
         const newUser = {
             name,
             email,

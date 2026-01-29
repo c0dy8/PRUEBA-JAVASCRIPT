@@ -4,7 +4,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const orderBox = document.querySelector(".order-box");
 
-    // BOTONES ADD
     document.querySelectorAll(".btn-add").forEach(button => {
         button.addEventListener("click", (e) => {
             const card = e.target.closest(".food-card");
@@ -78,10 +77,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
     renderCart();
 
-});  // <-- esta llave y paréntesis estaban faltando
+}); 
 
 
-// SEARCH BAR (Fuera de DOMContentLoaded porque se asegura que esté arriba)
 const searchInput = document.getElementById("searchInput");
 const foodItems = document.querySelectorAll(".food-item");
 
@@ -109,5 +107,4 @@ function handleSearch() {
     });
 }
 
-// Enlazamos el input con la función debounceada
 searchInput.addEventListener("input", debounce(handleSearch, 400));
